@@ -1,0 +1,33 @@
+<div class="container-full">
+  <div class="row">
+    <div class="col-lg-2 col-md-2">
+      <div class="list-group">
+        <a href="#!/navigation" class="list-group-item">Navigation</a>
+      </div>
+    </div>
+    <div class="col-lg-10 col-md-10">
+      <h1 class="page-header-compact">Navigation</h1>
+
+      <div class="col-lg-6">
+        <ul>
+          <li>PIMS
+            <div ng-include src="'/app/navigation/views/_navItems.html'" onload="navItems"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            Props
+          </div>
+          <div class="panel-footer">
+            <div class="row">
+              <div class="col-lg-8"><button type="button" class="btn btn-default">Up</button><button type="button" class="btn btn-default">Down</button></div>
+              <div class="col-lg-4"><button type="button" class="btn btn-default">Add SubItem</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

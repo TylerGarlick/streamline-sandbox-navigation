@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <link rel="stylesheet" href="/output/css/app.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-top" role="navigation" ng-controller="NavCtrl">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">PIMS</a>
+      </div>
+      <ul class="nav navbar-nav navbar-primary">
+        <li ng-repeat="nav in navItems"><a ng-href="{{ nav.url }}">{{ nav.name }}</a>
+          <nav class="sub-navbar" ng-show="nav.children.length > 0">
+            <ul class="nav navbar-nav">
+              <li ng-repeat="child in nav.children"><a ng-href="{{ child.url }}">{{ child.name }}</a></li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle ng-binding" data-toggle="dropdown">Tyler Garlick <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a ng-href="http://pims.streamlinedb.dev/#!/logout" href="http://pims.streamlinedb.dev/#!/logout">Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div ng-view/>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom navbar-footer">
+      <div class="container-full">
+        <div class="row">
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6">
+            <div class="pull-right ng-binding">
+              Oct 11, 2013 10:42:55 AM | Settings Module: v1.0
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/output/js/vendors.js"></script>
+    <script src="/output/js/application.js"></script>
+  </body>
+</html>

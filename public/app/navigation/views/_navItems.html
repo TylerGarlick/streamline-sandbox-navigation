@@ -1,0 +1,7 @@
+<ul>
+  <li ng-repeat="nav in navItems">{{ nav.name }}
+    <ul ng-show="nav.children.length > 0">
+      <li ng-repeat="child in nav.children">{{ child.name }}</li>
+    </ul>
+  </li>
+</ul>

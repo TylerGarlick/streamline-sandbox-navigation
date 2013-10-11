@@ -1,0 +1,53 @@
+@import "../vendors/bootstrap/less/bootstrap.less";
+@import "../vendors/lesshat/lesshat.less";
+
+@white: #fff;
+
+.navbar-top {
+  .box-shadow(0 0px 12px rgba(0, 0, 0, .85));
+}
+
+.sub-navbar {
+  .navbar;
+  .navbar-inverse;
+  .navbar-fixed-top;
+  //  .box-shadow(0 6px 12px rgba(0, 0, 0, .85));
+
+  margin-top: 50px;
+  display: none;
+  background: @navbar-inverse-link-active-bg;
+
+  a {
+    color: @white;
+  }
+
+  a:hover {
+    color: darken(@white, 15%);
+    background: #000;
+  }
+}
+
+.navbar-primary {
+  li:hover {
+    a {
+      color: @white !important;
+    }
+
+    background: @navbar-inverse-link-active-bg;
+
+    .sub-navbar {
+      display: block;
+      li {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.navbar-primary {
+  li:active {
+    a {
+      color: @white !important;
+    }
+  }
+}
